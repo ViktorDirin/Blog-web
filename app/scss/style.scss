@@ -5,6 +5,40 @@
 @import "global";
 
 .header {
+  color: #ffffff;
+  height: 590px;
+  background-image: url(../images/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__menu {
+    max-width: 1450px;
+    padding: 70px 15px 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    &-list {
+      display: flex;
+    }
+    &-item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+  &__inner {
+    padding: 100px 0;
+    text-align: center;
+    &-subtitle {
+      @extend %roboto-600;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    &-title {
+      @extend %roboto-800;
+      font-size: 58px;
+    }
+  }
 }
 
 // .menu {

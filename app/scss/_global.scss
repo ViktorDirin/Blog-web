@@ -1,7 +1,7 @@
 body {
   color: $defoult;
   font-size: 16px;
-  line-height: 18px;
+  line-height: normal;
   @extend %roboto-400;
   height: 100%;
   display: flex;
