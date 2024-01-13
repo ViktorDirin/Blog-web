@@ -1,0 +1,53 @@
+$accent: #ff424c;
+$defoult: #767676;
+$title: #1d1d1d;
+// $bg: #f6f6f6;
+// $border: #ececec;
+
+%roboto-300 {
+  font-family: "Roboto-Light";
+  font-weight: 300;
+}
+
+%roboto-400 {
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+}
+
+%roboto-500 {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+}
+
+%roboto-600 {
+  font-family: "Roboto-Bold";
+  font-weight: 600;
+}
+
+%roboto-800 {
+  font-family: "Roboto-Black";
+  font-weight: 800;
+}
+
+// %btn{
+//     cursor: pointer;
+//     padding: 12px 36px;
+//     width: fit-content;
+//     text-transform: uppercase;
+//     color: #ffffff;
+//     @extend %roboto-400;
+//     background-color: $accent;
+//     border: 1px solid transparent;
+//     box-shadow: 7px 7px 20px #fe3e575e;
+//     &:hover {
+//             background-color: #ff0021;
+//             border: 1px solid #ffffff;
+//         }
+// }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
