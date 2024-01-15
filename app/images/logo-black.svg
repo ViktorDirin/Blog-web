@@ -1,0 +1,17 @@
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="76" height="36" viewBox="0 0 76 36">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        font-family: Montserrat;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        fill: #262626;
+      }
+    </style>
+  </defs>
+  <text id="ЮК" class="cls-1" x="-2" y="35.001">ЮК</text>
+  <circle id="Oval" class="cls-2" cx="72.5" cy="3.5" r="3.5"/>
+</svg>
