@@ -47,6 +47,8 @@ function building() {
   return src([
     'app/css/style.min.css',
     'app/js/main.min.js',
+    'app/images/**/*.*',
+    'app/fonts/**/*.*',
     'app/**/*.html'
   ], { base: 'app' })
     .pipe(dest('dist'))
@@ -57,5 +59,5 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
 
-exports.bild = series(cleanDist, building);
+exports.build = series(cleanDist, building);
 exports.default = parallel(styles, scripts, browsersync, watching);
