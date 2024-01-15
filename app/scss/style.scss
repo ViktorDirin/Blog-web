@@ -40,9 +40,215 @@
     }
   }
 }
-
-// .menu {
-// }
+.main {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 0;
+  }
+  &__block {
+    width: 64%;
+    &-item {
+      margin-bottom: 80px;
+    }
+    &-date {
+      margin: 34px 0 12px;
+      color: #bebebe;
+    }
+    &-title {
+      @extend %roboto-600;
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #1d1d1d;
+    }
+    &-text {
+      color: #8d8d8d;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+    &-link {
+      cursor: pointer;
+      @extend %roboto-600;
+      text-transform: uppercase;
+      color: #141414;
+      letter-spacing: 1.7px;
+    }
+    &-pages {
+      position: relative;
+      margin-top: 50px;
+      padding: 0 40px;
+      width: fit-content;
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        width: 10px;
+        height: 19px;
+      }
+      &::before {
+        left: 0;
+        background-image: url(../images/icons/arrow-left.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &::after {
+        right: 0;
+        background-image: url(../images/icons/arrow-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &-list {
+        display: block;
+      }
+      &-item {
+        display: inline-block;
+        color: #3e3e3e;
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  &__aside {
+    width: 30%;
+    &-search {
+      position: relative;
+      margin-bottom: 78px;
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 22px;
+        right: 22px;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/icons/search.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+      }
+    }
+    &-input {
+      width: 100%;
+      padding: 20px 50px 20px 28px;
+      color: #a4a4a4;
+      border: 1px solid #a4a4a4;
+      &::placeholder {
+        text-transform: capitalize;
+        font-style: italic;
+      }
+    }
+    &-title {
+      @extend %roboto-600;
+      color: #141414;
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    &-categories {
+      margin-bottom: 78px;
+      &-list {
+      }
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: $accent;
+        }
+      }
+    }
+    &-records {
+      margin-bottom: 78px;
+    }
+    &-tags {
+      margin-bottom: 78px;
+      &-wraper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &-item {
+      }
+      &-link {
+        cursor: pointer;
+        border: 1px solid $defoult;
+        padding: 10px 24px;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $accent;
+          color: #ffffff;
+          border: 1px solid transparent;
+        }
+        &:not(:last-child) {
+          margin-right: 12px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &-advblock {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      &-wraper {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #141414;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 12px;
+      }
+      &-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #ffffff;
+        border: 1px solid $defoult;
+      }
+      &-name {
+        @extend %roboto-600;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+      }
+      &-text {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+.aside {
+  &__records {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+    &-img {
+      margin-right: 28px;
+    }
+    &-text {
+      @extend %roboto-600;
+      font-size: 20px;
+      color: #141414;
+      margin-bottom: 20px;
+    }
+  }
+}
 
 // ----------------------------------- FOOTER ----------------------------
 
