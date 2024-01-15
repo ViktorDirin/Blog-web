@@ -8,6 +8,19 @@
 
 /* Large Devices, Wide Screens  ----------------------------------------------- 1200 --------------------*/
 @media only screen and (max-width: 1200px) {
+  .main__inner {
+    padding: 50px 0;
+  }
+  .aside {
+    &__records {
+      &-item {
+        flex-wrap: wrap;
+      }
+      &-img {
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops  -------------------------- 1024 -----------------------------------------*/
@@ -16,18 +29,187 @@
 
 /* Medium Devices, Desktops ------------------------- 992 ---------------------------------------*/
 @media only screen and (max-width: 992px) {
+  .main__block-item {
+    margin-bottom: 40px;
+  }
+  .main__aside {
+    &-search,
+    &-categories,
+    &-records,
+    &-tags {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 /* Small Devices, Tablets  ----------------------------------------------- 768 --------------------*/
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 5px;
+  }
+  .header {
+    height: auto;
+    &__menu {
+      padding: 40px 15px 20px;
+    }
+    &__inner {
+      padding: 50px 0;
+      &-title {
+        font-size: 38px;
+      }
+    }
+  }
+  .main {
+    &__block {
+      width: 100%;
+    }
+    &__aside {
+      position: fixed;
+      padding: 50px 20px;
+      overflow: hidden;
+      height: 100vh;
+      top: 0;
+      right: -110%;
+      width: 320px;
+      transition: all 0.5s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.9);
+      &--open {
+        right: 0;
+        transition: all 0.5s ease-in-out;
+      }
+      &-btn {
+        display: block;
+      }
+      &-wraper {
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        right: -17px;
+        position: absolute;
+      }
+      &-search {
+        &::after {
+          top: 10px;
+          right: 8px;
+          width: 22px;
+          height: 22px;
+        }
+      }
+      &-input {
+        padding: 10px 40px 10px 18px;
+      }
+    }
+  }
+  .footer {
+    &__inner {
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+    &__contact {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      &-img {
+        width: 100px;
+        margin-right: 50px;
+      }
+      &-wraper {
+        display: flex;
+        flex-direction: column;
+      }
+      &-tel {
+        margin-top: 16px;
+      }
+    }
+    &__block {
+      &-title {
+        margin-bottom: 14px;
+      }
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 /* Small Devices, Tablets ----------------------------------------------- 576 --------------------*/
 @media only screen and (max-width: 576px) {
+  .header {
+    &__menu {
+      position: fixed;
+      width: 100%;
+      padding: 20px 5px;
+      background-color: #1d1d1da1;
+      &-btn {
+        display: block;
+      }
+      &-list {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 20px);
+        background-color: #1d1d1da1;
+        border: 1px solid #ffffff;
+        transition: all 0.3s;
+        &--open {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+      }
+      &-item {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+    &__inner {
+      margin-top: 76px;
+      padding: 20px 0;
+      &-subtitle {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      &-title {
+        font-size: 22px;
+      }
+    }
+  }
+  .footer {
+    &__inner {
+      justify-content: space-around;
+    }
+    &__block {
+      &:last-child {
+        width: 100%;
+        text-align: center;
+        margin-top: 16px;
+      }
+      &-social-list {
+        justify-content: center;
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones ----------------------------------------------- 480 --------------------*/
 @media only screen and (max-width: 480px) {
+  .main__inner {
+    padding: 10px 0;
+  }
+  .main__block {
+    &-item {
+      margin-bottom: 15px;
+    }
+    &-date {
+      margin: 14px 0 8px;
+    }
+    &-title,
+    &-text {
+      margin-bottom: 14px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones ----------------------------------------------- 320 --------------------*/
